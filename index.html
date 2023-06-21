@@ -1,1 +1,103 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Adam Penner's Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="header">
+        <h1>Adam Penner's Portfolio</h1>
+        <div class="dropdown">
+          <a class="dropbtn" id="menu-toggle">&#9776;</a>
+          <div class="dropdown-content" id="menu-content">
+            <ul id="menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="aifun.html">AI Fun</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+  <section id="hero">
+    <div class="container">
+      <div class="hero-text">
+        <h2>Welcome to my Portfolio</h2>
+        <p>I'm a passionate web developer with experience in frontend and backend development. Through this portfolio, I aim to showcase my skills and projects.</p>
+      </div>
+      <div class="hero-image"></div>
+    </div>
+  </section>
+
+  <section id="main-body">
+    <div class="container">
+      <div class="card">
+      <!-- Card 1-->
+        <img src="image1.jpg" alt="Card Image">
+        <div class="card-content">
+          <h3>Project 1</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum, sapien a tempus tristique, nulla dolor condimentum est, non aliquet magna lacus nec enim.</p>
+          <a href="#" class="cta">Read More</a>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="image1.jpg" alt="Card Image">
+        <div class="card-content">
+          <h3>Project 2</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum, sapien a tempus tristique, nulla dolor condimentum est, non aliquet magna lacus nec enim.</p>
+          <a href="#" class="cta">Read More</a>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="image1.jpg" alt="Card Image">
+        <div class="card-content">
+          <h3>Project 3</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum, sapien a tempus tristique, nulla dolor condimentum est, non aliquet magna lacus nec enim.</p>
+          <a href="#" class="cta">Read More</a>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="card">
+        <img src="image1.jpg" alt="Card Image">
+        <div class="card-content">
+          <h3>Project 4</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum, sapien a tempus tristique, nulla dolor condimentum est, non aliquet magna lacus nec enim.</p>
+          <a href="#" class="cta">Read More</a>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="card">
+        <img src="image1.jpg" alt="Card Image">
+        <div class="card-content">
+          <h3>Project 5</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum, sapien a tempus tristique, nulla dolor condimentum est, non aliquet magna lacus nec enim.</p>
+          <a href="#" class="cta">Read More</a>
+        </div>
+      </div>
+      <!-- Card 6 -->
+      <div class="card">
+        <img src="image1.jpg" alt="Card Image">
+        <div class="card-content">
+          <h3>Project 6</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum, sapien a tempus tristique, nulla dolor condimentum est, non aliquet magna lacus nec enim.</p>
+          <a href="#" class="cta">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var menuToggle = document.getElementById('menu-toggle');
+            var dropdownContent = document.getElementById('menu-content');
+
+            menuToggle.addEventListener('click', function() {
+                dropdownContent.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -121,6 +121,56 @@ h1 {
   border-radius: 4px;
 }
 
+footer {
+  background-color: darkgrey;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+.contact-form label,
+.contact-form input[type="text"],
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.contact-form .input-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form .input-row input[type="text"] {
+  flex: 1;
+  min-width: 35%; /* Add a minimum width */
+}
+
+.contact-form input[type="submit"] {
+  background-color: slateblue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+  .contact-form .input-row {
+    flex-direction: row;
+  }
+
+  .contact-form .input-row input[type="text"] {
+    margin-right: 10px;
+  }
+}
+
+/* Media query for medium-sized screens */
 @media screen and (max-width: 900px) {
   .container {
     grid-template-columns: repeat(2, 1fr);
@@ -135,6 +185,7 @@ h1 {
   }
 }
 
+/* Media query for small screens */
 @media screen and (max-width: 600px) {
   .container {
     grid-template-columns: 1fr;
@@ -152,7 +203,7 @@ h1 {
     margin-left: auto;
   }
 
- /* Dropdown Content (Hidden by Default) */
+  /* Dropdown Content (Hidden by Default) */
   .dropdown {
     position: relative;
     display: inline-block;
@@ -201,6 +252,4 @@ h1 {
   .dropdown-content.active {
     display: flex;
   }
-
 }
-

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Adam Penner's Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="blog.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div id="header">
+    <h1>Adam Penner's Portfolio</h1>
+    <div class="dropdown">
+      <button class="dropbtn" id="menu-toggle">&#9776;</button>
+      <div class="dropdown-content flex-column">
+        <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="aifun.html">AI Fun</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <section id="main-body">
+    <div class="container">
+      <div class="card">
+        <h2>Blog Title 1</h2>
+        <p>First paragraph or two of the blog...</p>
+        <a href="#" class="cta">Read More</a>
+      </div>
+      <div class="card">
+        <h2>Blog Title 2</h2>
+        <p>First paragraph or two of the blog...</p>
+        <a href="#" class="cta">Read More</a>
+      </div>
+      <!-- Add more blog cards as needed -->
+    </div>
+  </section>
+
+  <div class="expanded-card">
+    <div class="expanded-card-content">
+      <h2>Blog Title</h2>
+      <p>Full content of the blog...</p>
+    </div>
+  </div>
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var menuToggle = document.getElementById('menu-toggle');
+      var dropdownContent = document.querySelector('.dropdown-content');
+
+      menuToggle.addEventListener('click', function() {
+        dropdownContent.classList.toggle('active');
+      });
+    });
+
+    // Get references to the card elements
+const cards = document.querySelectorAll('.card');
+const expandedCard = document.querySelector('.expanded-card');
+const expandedCardContent = document.querySelector('.expanded-card-content');
+
+// Attach event listeners to the cards
+cards.forEach((card) => {
+  card.addEventListener('click', (event) => {
+    // Prevent the default link behavior
+    event.preventDefault();
+
+    // Get the title and content of the clicked card
+    const title = card.querySelector('h2').textContent;
+    const content = card.querySelector('p').textContent;
+
+    // Populate the expanded card with the title and content
+    expandedCardContent.innerHTML = `
+      <h2>${title}</h2>
+      <p>${content}</p>
+    `;
+
+    // Show the expanded card
+    expandedCard.style.display = 'flex';
+  });
+});
+
+// Close the expanded card when clicking outside its content
+expandedCard.addEventListener('click', (event) => {
+  if (event.target === expandedCard) {
+    expandedCard.style.display = 'none';
+  }
+});
+
+  </script>
+
+
+<footer>
+  <div class="contact-form">
+    <h2>Contact Me</h2>
+    <form action="mailto:penner.adam@gmail.com" method="post" enctype="multipart/form-data">
+      <div class="input-row">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+      </div>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message"></textarea>
+      <input type="submit" value="SEND">
+    </form>
+  </div>
+</footer>
+
+</body>
+</html>

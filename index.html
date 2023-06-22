@@ -6,20 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div id="header">
-        <h1>Adam Penner's Portfolio</h1>
-        <div class="dropdown">
-          <a class="dropbtn" id="menu-toggle">&#9776;</a>
-          <div class="dropdown-content" id="menu-content">
-            <ul id="menu">
-              <li><a href="#">Home</a></li>
-              <li><a href="projects.html">Projects</a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="aifun.html">AI Fun</a></li>
-            </ul>
-          </div>
-        </div>
+  <div id="header">
+    <h1>Adam Penner's Portfolio</h1>
+    <div class="dropdown">
+      <button class="dropbtn" id="menu-toggle">&#9776;</button>
+      <div class="dropdown-content flex-column" id="menu-content">
+        <ul id="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="aifun.html">AI Fun</a></li>
+        </ul>
       </div>
+    </div>
+  </div>
 
   <section id="hero">
     <div class="container">
@@ -89,15 +89,17 @@
       </div>
     </div>
   </section>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var menuToggle = document.getElementById('menu-toggle');
-            var dropdownContent = document.getElementById('menu-content');
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var menuToggle = document.getElementById('menu-toggle');
+      var dropdownContent = document.querySelector('.dropdown-content');
 
-            menuToggle.addEventListener('click', function() {
-                dropdownContent.classList.toggle('active');
-            });
-        });
-    </script>
+      menuToggle.addEventListener('click', function() {
+        dropdownContent.classList.toggle('active');
+      });
+    });
+
+  </script>
+
 </body>
 </html>
